@@ -2,20 +2,83 @@
 /*
 fonts: Lilita One, Fredoka, Pacifico, Lobster
 */
+:root{
+    --bg-accent: hsl(95, 31%, 40%);
+    --bg-dark: hsl(22, 69%, 55%);
+    --bg-light: hsl(31, 73%, 62%);
+    --off-white: hsl(37, 33%, 92%);
+    --black: hsl(0,0%,0%);
+}
 body{
-    background: linear-gradient(135deg, #e5a258 0%, #dc793e 100%);
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-dark) 100%);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-accent);
+    transition: background-color 0.3s;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.nav-left a {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: var(--off-white);
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.nav-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-icon span {
+    color: #fff;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .nav-right {
+        display: none;
+    }
+    .nav-icon {
+        display: block;
+    }
+}
+main{
+    margin-top: 60px;
+}
+
+main h1{
+    font-family: 'Lobster', sans-serif;
     height: 100vh;
     width: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-header h1{
-    font-family: 'Fredoka', sans-serif;
-}
-
-main h1{
-    font-family: 'Lobster', sans-serif;
-    
 }
