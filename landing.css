@@ -65,12 +65,12 @@ nav{
     }
 
     #hamburger{
-        display: block;
+        display: none;
         cursor: pointer;
     }
 
     #close{
-        display: none;
+        display: block;
         cursor: pointer;
     }
 }
@@ -86,12 +86,12 @@ nav{
     }
 
     #hamburger{
-        display: block;
+        display: none;
         cursor: pointer;
     }
 
     #close{
-        display: none;
+        display: block;
         cursor: pointer;
     }
 }
