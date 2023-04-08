@@ -25,6 +25,6 @@ navbar.style.display = "block";
 closeIcon.addEventListener("click", function() {
   // Hide the close icon and show the menu icon
 closeIcon.style.display = "none";
-menuIcon.style.display = "grid";
+menuIcon.style.display = "block";
 navbar.style.display = "none";
 });

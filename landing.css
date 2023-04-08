@@ -44,33 +44,26 @@ nav{
 }
 
 .nav-right {
-    display: flex;
+    display: none;
 }
 
 .nav-right a {
-    text-decoration: none;
-    color: var(--off-white);
-    font-size: 18px;
-    margin-left: 30px;
+    display: inline-block;
+    color: var(--black);
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 /* Mobile configs. The hamburger menu*/
 @media (max-width: 849px) {
-    #hamburger_contents.active{
-        display: block;
-        color: var(--black);
-        font-family: 'Lilita One', sans-serif;
-        font-weight: 400;
-        font-size: 5px;
-    }
-
     #hamburger{
-        display: none;
+        display: block;
         cursor: pointer;
     }
 
     #close{
-        display: block;
+        display: none;
         cursor: pointer;
     }
 }
