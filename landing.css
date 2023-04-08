@@ -6,11 +6,15 @@ fonts: Lilita One, Fredoka, Pacifico, Lobster
 Bitter, Zilla Slab, Enriqueta
 */
 :root{
+    font-size: 16px;
     --bg-accent: hsl(95, 31%, 40%);
+    --dark-accent: hsl(96, 31%, 17%);
     --bg-dark: hsl(22, 69%, 55%);
     --bg-light: hsl(31, 73%, 62%);
     --off-white: hsl(37, 33%, 92%);
+    --brown: hsl(31, 45%, 48%);
     --black: hsl(0,0%,0%);
+    --highlight: hsl(67, 89%, 60%);
 }
 body{
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-dark) 100%);
@@ -43,31 +47,56 @@ nav{
     font-size: 32px;
 }
 
-.nav-right {
-    display: none;
-}
-
-.nav-right a {
-    display: inline-block;
-    color: var(--black);
+#hamburger_contents{
     font-family: 'Lilita One', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.5rem;
+    list-style-type: none;
+    display: none;
+    position: fixed;
+    padding: 0;
+    top: 0rem;
+    right: 0rem;
+    background-color: var(--bg-accent);
+    border-bottom-left-radius: 1rem;
+    
 }
 
+#hamburger_contents li{
+    display: block;
+    margin: .5rem 2rem;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#hamburger_contents li a{
+    text-decoration: none;
+    color: var(--black);
+    padding: 1rem 2rem;
+}
+
+#hamburger_contents li a:hover{
+    background-color: var(--highlight);
+    border-radius: 1rem;
+}
 /* Mobile configs. The hamburger menu*/
 @media (max-width: 849px) {
     #hamburger{
         display: block;
         cursor: pointer;
+        background-size: cover;
+        z-index: 5;
     }
 
     #close{
         display: none;
         cursor: pointer;
+        z-index: 5;
     }
 }
 
+/* desktop config*/
 @media (min-width: 850px) {
 
     #hamburger_contents.active{
@@ -76,21 +105,24 @@ nav{
         font-family: 'Lilita One', sans-serif;
         font-weight: 400;
         font-size: 20px;
+        z-index: 5;
     }
 
     #hamburger{
-        display: none;
+        display: block;
         cursor: pointer;
+        z-index: 5;
     }
 
     #close{
-        display: block;
+        display: none;
         cursor: pointer;
+        z-index: 5;
     }
 }
 
 main{
-    margin-top: 60px;
+    margin-top: 2rem;
 }
 
 main h1{
@@ -98,7 +130,37 @@ main h1{
     height: 100vh;
     width: 100%;
     margin: 0;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#headshot{
+    width: 30rem;
+    height: 25rem;
+}
+#About p{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#Certs p{
+    display: flex;
+}
+#Aplus-image{
+    width: 25rem;
+    height: 20rem;
+}
+
+/* Add this to your CSS file */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(97, 134, 70, 1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.1);
 }
