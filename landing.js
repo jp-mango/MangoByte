@@ -4,15 +4,27 @@ window.addEventListener('scroll', function () {
 
     if (scrollPos > 0) {
         navbar.classList.add('scrolled');
+        navbar.style.backgroundColor = 'rgb(97, 134, 70, 0)';
     } else {
         navbar.classList.remove('scrolled');
+        navbar.style.backgroundColor = 'rgb(97, 134, 70, 1)';
     }
 });
 
-const navIcon = document.getElementById('nav-icon');
-const navMenu = document.getElementById('nav-menu');
+var menuIcon = document.getElementById("hamburger");
+var closeIcon = document.getElementById("close");
+var navbar = document.getElementById("hamburger_contents");
 
-navIcon.addEventListener('click', function () {
-    navMenu.classList.toggle('show');
-    navIcon.classList.toggle('open');
+menuIcon.addEventListener("click", function() {
+  // Hide the menu icon and show the close icon
+menuIcon.style.display = "none";
+closeIcon.style.display = "block";
+navbar.style.display = "block";
+});
+
+closeIcon.addEventListener("click", function() {
+  // Hide the close icon and show the menu icon
+closeIcon.style.display = "none";
+menuIcon.style.display = "grid";
+navbar.style.display = "none";
 });

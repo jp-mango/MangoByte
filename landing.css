@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&family=Lilita+One&family=Lobster&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Zilla+Slab:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Enriqueta&display=swap');
 /*
 fonts: Lilita One, Fredoka, Pacifico, Lobster
+Bitter, Zilla Slab, Enriqueta
 */
 :root{
     --bg-accent: hsl(95, 31%, 40%);
@@ -21,7 +24,7 @@ header{
     left: 0;
     right: 0;
     background-color: var(--bg-accent);
-    transition: background-color 0.3s;
+    transition: background-color .5s;
 }
 
 nav{
@@ -51,24 +54,48 @@ nav{
     margin-left: 30px;
 }
 
-.nav-icon {
-    display: none;
-    cursor: pointer;
-}
-
-.nav-icon span {
-    color: #fff;
-    font-size: 24px;
-}
-
-@media (max-width: 768px) {
-    .nav-right {
-        display: none;
-    }
-    .nav-icon {
+/* Mobile configs. The hamburger menu*/
+@media (max-width: 849px) {
+    #hamburger_contents.active{
         display: block;
+        color: var(--black);
+        font-family: 'Lilita One', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    #hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    #close{
+        display: none;
+        cursor: pointer;
     }
 }
+
+@media (min-width: 850px) {
+
+    #hamburger_contents.active{
+        display: block;
+        color: var(--black);
+        font-family: 'Lilita One', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    #hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    #close{
+        display: none;
+        cursor: pointer;
+    }
+}
+
 main{
     margin-top: 60px;
 }
