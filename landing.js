@@ -3,22 +3,16 @@ window.addEventListener('scroll', function () {
     const scrollPos = window.pageYOffset;
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
-    const quarterPage = 0.45 * documentHeight;
+    const quarterPage = 0.4 * documentHeight;
 
-    if (scrollPos > 0){
-        navbar.classList.add('scrolled');
-        navbar.style.backgroundColor = 'rgb(97, 134, 70, .75)';
-    } else {
-        navbar.classList.remove('scrolled');
-        navbar.style.backgroundColor = 'rgb(97, 134, 70, 1)';
-    }
+    
 
     if (scrollPos > quarterPage) {
       navbar.classList.remove('scrolled');
         navbar.style.backgroundColor = 'rgb(97, 134, 70, 1)';
     } else {
       navbar.classList.add('scrolled');
-        navbar.style.backgroundColor = 'rgb(97, 134, 70, .75)';
+        navbar.style.backgroundColor = 'rgb(97, 134, 70, 0)';
     }
 });
 

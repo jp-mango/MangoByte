@@ -27,8 +27,6 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--bg-accent);
-    transition: background-color .5s;
 }
 
 nav{
@@ -93,6 +91,11 @@ nav{
         display: none;
         cursor: pointer;
         z-index: 5;
+    }
+
+    #About p{
+        display: flex;
+        flex-direction: column;
     }
 }
 
